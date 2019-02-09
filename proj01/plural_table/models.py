@@ -4,6 +4,8 @@ class Author(models.Model):
     id_author = models.CharField(max_length=10)
     name_jp = models.CharField(max_length=10)
     name_en = models.CharField(max_length=20)
+    date_birth = models.DateField()
+    date_death = models.DateField()
  
     def __str__(self):
         return '&lt;Author:id =' + str(self.id) + ',' + self.name_jp + '(' + str(self.name_en) + ')&gt;'

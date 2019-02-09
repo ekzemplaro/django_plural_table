@@ -14,6 +14,8 @@
 <tr><th>Id_author</th><td>{{obj.id_author}}</td></tr>
 <tr><th>Name_jp</th><td>{{obj.name_jp}}</td></tr>
 <tr><th>Name_en</th><td>{{obj.name_en}}</td></tr>
+<tr><th>Date_birth</th><td>{{obj.date_birth}}</td></tr>
+<tr><th>Date_death</th><td>{{obj.date_death}}</td></tr>
 <form action="{% url 'author_delete' id %}" method="post">
 	{% csrf_token %}
 	<input type="submit" value="click">

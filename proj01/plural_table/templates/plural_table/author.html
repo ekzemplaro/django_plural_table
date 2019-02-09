@@ -14,6 +14,8 @@
 	<th>id_author</th>
 	<th>name_jp</th>
 	<th>name_en</th>
+	<th>date_birth</th>
+	<th>date_death</th>
 	<th></th>
 	<th></th>
 </tr>
@@ -22,6 +24,8 @@
 	<td>{{item.id_author}}</td>
 	<td>{{item.name_jp}}</td>
 	<td>{{item.name_en}}</td>
+	<td>{{item.date_birth}}</td>
+	<td>{{item.date_death}}</td>
 	<td><a href="{% url 'author_edit' item.id %}">Edit</a></td>
 	<td><a href="{% url 'author_delete' item.id %}">Delete</a></td>
 </tr>

@@ -5,7 +5,7 @@ from .models import Work
 class AuthorForm(forms.ModelForm):
 	class Meta:
 		model = Author
-		fields = ['id_author','name_jp','name_en']
+		fields = ['id_author','name_jp','name_en','date_birth','date_death']
 #
 class WorkForm(forms.ModelForm):
 	class Meta:

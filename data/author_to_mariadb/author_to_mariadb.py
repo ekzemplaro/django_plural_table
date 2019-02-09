@@ -19,8 +19,11 @@ from file_io import file_to_str_proc
 def	sql_insert_proc	(cursor_aa,id_author,name_jp,name_en):
 #	print ("*** sql_insert_proc ***")
 #
-	ft_aa="insert into plural_table_author (id_author,name_jp,name_en) values ("
-	ft_bb ="'%s','%s','%s')" % (id_author,name_jp,name_en)
+	date_birth = "1950-1-1"
+	date_death = "2000-10-8"
+#
+	ft_aa="insert into plural_table_author (id_author,name_jp,name_en,date_birth,date_death) values ("
+	ft_bb ="'%s','%s','%s','%s','%s')" % (id_author,name_jp,name_en,date_birth,date_death)
 	sql_str=ft_aa + ft_bb
 	print (sql_str)
 	cursor_aa.execute (sql_str)
