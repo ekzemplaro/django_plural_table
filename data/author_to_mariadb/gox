@@ -1,0 +1,1 @@
+./author_to_mariadb.py authors.json 

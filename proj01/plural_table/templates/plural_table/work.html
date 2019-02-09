@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+<link rel="stylesheet"
+ href="{% static 'plural_table/css/plural_table.css' %}">
+<title>{{ title }}</title>
+</head>
+<body>
+<p>{{message|safe}}</p>
+<a href="{% url 'work_create' %}">Create</a><p />
+<table>
+<tr>
+	<th>id_work</th>
+	<th>title_jp</th>
+	<th>title_en</th>
+	<th>id_author</th>
+	<th></th>
+	<th></th>
+</tr>
+{% for item in data %}
+<tr>
+	<td>{{item.id_work}}</td>
+	<td>{{item.title_jp}}</td>
+	<td>{{item.title_en}}</td>
+	<td>{{item.id_author}}</td>
+	<td><a href="{% url 'work_edit' item.id %}">Edit</a></td>
+	<td><a href="{% url 'work_delete' item.id %}">Delete</a></td>
+</tr>
+{% endfor %}
+</table>
+<hr />
+Feb/09/2019 AM 09:59<p />
+</body>
+</html>

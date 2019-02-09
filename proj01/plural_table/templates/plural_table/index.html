@@ -1,0 +1,36 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+<link rel="stylesheet"
+ href="{% static 'plural_table/css/plural_table.css' %}">
+<title>{{ title }}</title>
+</head>
+<body>
+<p>{{message|safe}}</p>
+<table>
+<tr>
+	<th>id_author</th>
+	<th>name_jp</th>
+	<th>name_en</th>
+	<th>id_work</th>
+	<th>title_jp</th>
+	<th>title_en</th>
+</tr>
+{% for item in data %}
+<tr>
+	<td>{{item.id_author}}</td>
+	<td>{{item.name_jp}}</td>
+	<td>{{item.name_en}}</td>
+	<td>{{item.id_work}}</td>
+	<td>{{item.title_jp}}</td>
+	<td>{{item.title_en}}</td>
+</tr>
+{% endfor %}
+</table>
+<a href="./author/">Author</a><p />
+<a href="./work/">Work</a><p />
+<hr />
+Feb/08/2019 PM 17:25<p />
+</body>
+</html>

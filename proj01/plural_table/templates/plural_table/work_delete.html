@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+<link rel="stylesheet"
+ href="{% static 'plural_table/css/plural_table.css' %}">
+<title>{{ title }}</title>
+</head>
+<body>
+<p>{{message|safe}}</p>
+<p>＊以下のレコードを削除します。</p>
+<table>
+<tr><th>ID</th><td>{{obj.id}}</td></tr>
+<tr><th>Id_work</th><td>{{obj.id_work}}</td></tr>
+<tr><th>Title_jp</th><td>{{obj.title_jp}}</td></tr>
+<tr><th>Title_en</th><td>{{obj.title_en}}</td></tr>
+<tr><th>Id_author</th><td>{{obj.id_author}}</td></tr>
+<form action="{% url 'work_delete' id %}" method="post">
+	{% csrf_token %}
+	<input type="submit" value="click">
+</form>
+</table>
+
+<hr />
+Feb/09/2019 AM 09:55<p />
+</body>
+</html>
